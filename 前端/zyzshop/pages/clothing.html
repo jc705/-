@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>服装及生活用品</title>
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+	<!-- Slick -->
+	<link type="text/css" rel="stylesheet" href="../css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="../css/slick-theme.css" />
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/body.css">
+</head>
+
+<body class="body-Margin">
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- Products tab & slick -->
+				<div class="col-md-12">
+					<div class="row">
+						<h3 class="title">衣服</h3>
+						<div class="products-tabs">
+
+							<!-- tab -->
+							<div id="tab1" class="tab-pane active" id="product-temp">
+								<div class="products-slick" data-nav="#slick-nav-1" id="tab1-temp">
+									<!-- product -->
+
+
+
+									<!-- /product -->
+								</div>
+								<div id="slick-nav-1" class="products-slick-nav"></div>
+							</div>
+							<!-- /tab -->
+						</div>
+					</div>
+				</div>
+				<!-- Products tab & slick -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- Products tab & slick -->
+				<div class="col-md-12">
+					<div class="row">
+						<h3 class="title">生活用品</h3>
+						<div class="products-tabs">
+
+							<!-- tab -->
+							<div id="tab1" class="tab-pane active" id="product-temp">
+								<div class="products-slick" data-nav="#slick-nav-1" id="tab2-temp">
+									<!-- product -->
+
+
+
+									<!-- /product -->
+								</div>
+								<div id="slick-nav-1" class="products-slick-nav"></div>
+							</div>
+							<!-- /tab -->
+						</div>
+					</div>
+				</div>
+				<!-- Products tab & slick -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- Products tab & slick -->
+				<div class="col-md-12">
+					<div class="row">
+						<h3 class="title">鞋子</h3>
+						<div class="products-tabs">
+
+							<!-- tab -->
+							<div id="tab1" class="tab-pane active" id="product-temp">
+								<div class="products-slick" data-nav="#slick-nav-1" id="tab3-temp">
+									<!-- product -->
+
+
+
+									<!-- /product -->
+								</div>
+								<div id="slick-nav-1" class="products-slick-nav"></div>
+							</div>
+							<!-- /tab -->
+						</div>
+					</div>
+				</div>
+				<!-- Products tab & slick -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<!-- Products tab & slick -->
+				<div class="col-md-12">
+					<div class="row">
+						<h3 class="title">其他</h3>
+						<div class="products-tabs">
+
+							<!-- tab -->
+							<div id="tab1" class="tab-pane active" id="product-temp">
+								<div class="products-slick" data-nav="#slick-nav-1" id="tab4-temp">
+									<!-- product -->
+
+
+
+									<!-- /product -->
+								</div>
+								<div id="slick-nav-1" class="products-slick-nav"></div>
+							</div>
+							<!-- /tab -->
+						</div>
+					</div>
+				</div>
+				<!-- Products tab & slick -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+
+
+
+	<!-- NEWSLETTER -->
+	<div id="newsletter" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="newsletter">
+						<p>发送消息给我们</p>
+						<form>
+							<input class="input" id="email-ipt" placeholder="请输入内容...">
+							<button id="email-btn" class="newsletter-btn"> 发送</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /NEWSLETTER -->
+
+
+	<script type="text/html" id="temp-card">
+			<!-- product -->
+	<div class="product" data-id="{{sid}}">
+		<div class="product-img">
+			<img src="{{pic}}" alt="">
+			<div class="product-label">
+				<span class="new">9成新</span>
+			</div>
+		</div>
+		<div class="product-body">
+			<p class="product-category">{{sclass}}</p>
+			<h3 class="product-name"><a href="./details.html?id={{sid}}" id="view-a">{{product}}</a></h3>
+			<h4 class="product-price">￥{{money}} <del class="product-old-price">￥{{money}}</del>
+			</h4>
+			<div class="product-rating">
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+			</div>
+			<div class="product-btns">
+				<button class="add-to-wishlist" id="add-like"><i class="fa fa-heart-o"></i><span class="tooltipp">加入喜欢</span></button>
+			</div>
+		</div>
+		<div class="add-to-cart">
+			<button class="add-to-cart-btn" id="add-tocart"><i class="fa fa-shopping-cart"></i> 加入购物车</button>
+		</div>
+	</div>
+	<!-- /product -->
+	</script>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/template-web.js"></script>
+	<!-- jQuery Plugins -->
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/clothing.js"></script>
+	<script src="../js/jump.js"></script>
+</body>
+
+</html>

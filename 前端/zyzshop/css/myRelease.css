@@ -1,0 +1,54 @@
+.area1 {
+    width: 800px;
+    height: 45px;
+    resize: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.area2 {
+    width: 800px;
+    height: 100px;
+    resize: none;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.useCount {
+    color: rgb(223, 32, 32);
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+
+.btnAdd {
+    background-color: #8f806a;
+    border: none;
+    border-radius: 30px;
+    width: 55px;
+    height: 25px;
+    color: #ffff;
+    margin-left: 20px;
+}
+
+.panelhead{
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #8f806a;
+}
+.paneltitle{
+    color: aliceblue;
+}
+
+.btn-del{
+    color: red;
+    border: none;
+    background: none;
+}

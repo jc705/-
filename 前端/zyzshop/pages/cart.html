@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>我的购物车 </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../js/template-web.js"></script>
+</head>
+
+<body>
+    </div>
+    <div class="c-container">
+        <div class="w">
+            <div class="cart-filter-bar">
+                <em>全部商品</em>
+            </div>
+            <!-- 购物车主要核心区域 -->
+            <div class="cart-warp">
+                <!-- 头部全选模块 -->
+                <div class="cart-thead">
+                    <div class="t-checkbox">
+                        <input type="checkbox" name="" id="" class="checkall"> 全选
+                    </div>
+                    <div class="t-goods">商品</div>
+                    <div class="t-price">单价</div>
+                    <div class="t-num">数量</div>
+                    <div class="t-sum">小计</div>
+                    <div class="t-action">操作</div>
+                </div>
+                <!-- 商品详细模块 -->
+                <div class="cart-item-list" id="cart-list">
+                    
+                </div>
+
+                <!-- 结算模块 -->
+                <div class="cart-floatbar">
+                    <div class="select-all">
+                        <input type="checkbox" name="" id="" class="checkall">全选
+                    </div>
+                    <div class="operation">
+                        <a href="javascript:;" class="remove-batch"> 删除选中的商品</a>
+                        <a href="javascript:;" class="clear-all">清理购物车</a>
+                    </div>
+                    <div class="toolbar-right">
+                        <div class="amount-sum">已经选<em>0</em>件商品</div>
+                        <div class="price-sum">总价： <em>￥0.00</em></div>
+                        <div class="btn-area"><a id="toarea" href="#">去结算</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type="text/html" id="trolley-temp">
+		<div class="cart-item" data-id={{sid}}>
+            <div class="p-checkbox p-padding">
+                <input type="checkbox" data-check={{statics}} name="" class="j-checkbox">
+            </div>
+            <div class="p-goods">
+                <div class="p-img">
+                    <img class="img-size" src={{pic}} alt="">
+                </div>
+                <div class="p-msg"><p><b>商品名：</b></p>{{product}}</div>
+            </div>
+            <div class="p-price p-padding" id="cartmoney">￥{{money.toFixed(2)}}</div>
+            <div class="p-num p-padding">
+                <div class="quantity-form">
+                    <a href="javascript:;" class="decrement">-</a>
+                    <input type="text" class="itxt" value={{tcount}}>
+                    <a href="javascript:;" class="increment">+</a>
+                </div>
+            </div>
+            <div class="p-sum p-padding" id="cartsums">￥{{(money*tcount).toFixed(2)}}</div>
+            <div class="p-action p-padding"><a style="color: red;" href="javascript:;">删除</a></div>
+        </div>
+	</script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/car.js"></script>
+</body>
+
+</html>

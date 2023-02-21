@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/material-dashboard.min.css">
+  <link rel="stylesheet" href="../css/myRelease.css">
+  <link rel="stylesheet" href="../css/body.css">
+
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <!-- Custom stlylesheet -->
+  <link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+  <script src="../js/template-web.js"></script>
+  <script src="../js/jquery-3.6.3.min.js"></script>
+  <!-- <script src="../js/jquery.min.js"></script> -->
+
+</head>
+
+<body class="body-Margin">
+
+  <div class="panel panel-primary" style="border-bottom:none;">
+    <div class="panelhead">
+      <h3 class="paneltitle">上架新商品</h3>
+    </div>
+    <div class="panel-body form-inline">
+
+      <div class="input-group" style="width: 220px;">
+        <div class="input-group-addon" style="width: 50px;">商品名称</div>
+        <input type="text" class="form-control" id="ipt-product" placeholder="  请输入商品名称">
+      </div>
+      <div class="input-group" style="width: 220px;margin-left: 20px;">
+        <div class="input-group-addon" style="width: 50px;">分区:
+          <select id="ipt-division">
+            <option data-id="1">电子产品</option>
+            <option data-id="2">服装及生活用品</option>
+            <option data-id="3">其他</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-group" style="width: 220px;margin-left: 20px;">
+        <div class="input-group-addon" style="width: 50px;">价格</div>
+        <input type="text" class="form-control" id="ipt-money" placeholder="  请输入价格">
+      </div>
+      <div class="input-group" style="width: 220px;margin-left: 20px;">
+        <div class="input-group-addon" style="width: 50px;">商品分类</div>
+        <input type="text" class="form-control" id="ipt-sclass" placeholder="  请输入商品分类">
+      </div>
+
+      <br><br>
+      <textarea id="ipt-pic" placeholder="图片链接..." class="area1" cols="30" rows="10" maxlength="1000"></textarea>
+      <b>
+        <span class="useCount" id="useCount1">0</span>
+        <span>/</span>
+        <span>500</span>
+      </b>
+
+      <br>
+
+      <textarea id="ipt-introduction" placeholder="商品介绍..." class="area2" cols="30" rows="10"
+        maxlength="1000"></textarea>
+      <b>
+        <span class="useCount" id="useCount2">0</span>
+        <span>/</span>
+        <span>1000</span>
+      </b>
+
+
+      <button id="btnAdd" class="btnAdd">添加</button>
+
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-12">
+        <div class="card my-4">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+              <h6 class="text-white text-capitalize ps-3">我发布的</h6>
+            </div>
+          </div>
+          <div class="card-body px-0 pb-2">
+            <div class="table-responsive p-0">
+              <table class="table align-items-center mb-0">
+                <thead>
+                  <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">商品</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">商品分类</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">价格</th>
+                    <th class="text-secondary opacity-7">操作</th>
+                  </tr>
+                </thead>
+                <tbody id="add-tbody">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div id="newsletter" class="section">
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="newsletter">
+            <p>发送消息给我们</p>
+            <form>
+              <input class="input" id="email-ipt" placeholder="请输入内容...">
+              <button id="email-btn" class="newsletter-btn"> 发送</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /NEWSLETTER -->
+
+  <script type="text/html" id="tbody-temp">
+      <tr>
+        <td>
+          <div class="d-flex px-2 py-1">
+            <div>
+              <img src={{pic}} class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+            </div>
+            <div class="d-flex flex-column justify-content-center">
+              <h6 class="mb-0 text-sm">{{product}}</h6>
+            </div>
+          </div>
+        </td>
+        <td>
+          <p class="text-xs font-weight-bold mb-0">{{division}}</p>
+          <p class="text-xs text-secondary mb-0">({{sclass}})</p>
+        </td>
+        <td class="align-middle text-center text-sm">
+          <p class="text-xs font-weight-bold mb-0">￥ {{money}}</p>
+        </td>
+        <td>
+          <div>
+            <a type="submit" href="javascript:;" class="btn-del" id="btn-del" data-id="{{sid}}" >删除</a>
+          </div>
+          
+        </td>
+      </tr>
+    </script>
+  <script src="../js/myRelease.js"></script>
+  <script src="../js/jump.js"></script>
+</body>
+
+</html>

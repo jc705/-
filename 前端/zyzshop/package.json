@@ -1,0 +1,8 @@
+{
+    "main": "main.html", 
+    "name": "zyzShop",
+    "version": "1.0.0",
+    "author": "caterpillar",
+    "description": "蚤丫找二手平台",
+    "keywords":["蚤丫找","jquery"]
+}

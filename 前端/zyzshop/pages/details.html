@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>商品详情 </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- start details -->
+	<link rel="stylesheet" type="text/css" href="../css/details.css" media="all" />
+
+
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/body.css">
+
+
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script src="../js/template-web.js"></script>
+</head>
+
+<body class="body-Margin">
+	<div class="home_content" id="view-div">
+
+	</div>
+
+	<!-- NEWSLETTER -->
+	<div id="newsletter" class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="newsletter">
+						<p>发送消息给我们</p>
+						<form>
+							<input class="input" id="email-ipt" placeholder="请输入内容...">
+							<button id="email-btn" class="newsletter-btn"> 发送</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /NEWSLETTER -->
+
+	<script type="text/html" id="temp-view">
+		<div class="span1_of_1">
+			<!-- start product_slider -->
+			<div class="product-view">
+				<div class="product-essential">
+					<div class="product-img-box">
+						<img style="padding: 7px 0 0 25px; width: 535px; height: 555px;" src="{{pic}}"
+							alt="Women Shorts" title="Women Shorts" />
+					</div>
+				</div>
+			</div>
+			<!-- end product_slider -->
+		</div>
+
+
+		<!-- start span1_of_1 -->
+		<div class="span1_of_1_des">
+			<div class="desc1">
+				<h3>{{product}}<span style="font-size: 15px;">（ {{division}} ）</span></h3>
+				<p>{{introduction}}</p>
+				<h5>￥：{{money}}</h5>
+				<div class="available">
+					<h4>商品属性 :</h4>
+					<ul>
+						<li>颜色:
+							<select>
+								<option>五彩斑斓的黑</option>
+							</select>
+						</li>
+						<li>大小:
+							<select>
+								<option>均码</option>
+							</select>
+						</li>
+						<li>新旧程度:
+							<select>
+								<option>9成新</option>
+							</select>
+						</li>
+					</ul>
+					<div class="btn_form" data-id={{sid}}>
+						<form>
+							<input type="button"  id="add-tocart" class="btn1" value="加入购物车" title="" />
+							<div style="display: inline-block;">
+								<input type="button" id="add-like" class="btn2" value="加入喜欢" title="" />
+							</div>
+							</form>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!-- start tabs -->
+		<section class="tabs">
+			<input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked">
+			<label for="tab-1" class="tab-label-1">概述</label>
+			<div class="clear-shadow"></div>
+
+			<div class="content">
+				<div class="content-1">
+					<p class="para top">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						{{introduction}}
+					</p>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+		</section>
+		<!-- end tabs -->
+	</script>
+
+	<script src="../js/jump.js"></script>
+	<script src="../js/view.js"></script>
+</body>
+
+</html>
